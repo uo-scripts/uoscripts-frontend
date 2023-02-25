@@ -52,7 +52,7 @@ impl Component for LoginRegister {
         html! {
             <div id="login-register">
                 {
-                    match &self.token {
+                    match self.token {
                         Some(_) => html! {
                             <button onclick={ctx.link().callback(|_| Msg::Logout)}>{"Logout"}</button>
                         },
